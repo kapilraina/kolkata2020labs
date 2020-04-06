@@ -1,0 +1,41 @@
+==== MS Key Concepts ====================
+Isolation ( Isolate Everything !) - Code Simplicity- Services, Teams, Scalability
+Distributed System 
+Single Responsibility (Single-responsiblity principle)
+Always oriented around business or domain capabilities or facts.
+It is a journey (constant evolution) -> Evolutionary Architectures.
+Loose-Coupling and high cohesion
+Automate Everything
+	Infrstructure as Code
+Design and Expect failure
+Eventual Consistency
+2PC is an anti-pattern
+High(and automated) observability
+
+
+========================================
+MS is SOA done well !!!
+
+SOA ( Coarse Grained)
+MS ( Fine Grained)
+"Micro" - Doesnt mean lines of code. It implies part of your domain which is related.
+You build it, you run it !
+
+==============REFERENCES===========================
+https://martinfowler.com/articles/microservices.html
+https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
+https://www.reactivemanifesto.org/
+https://towardsdatascience.com/cap-theorem-and-distributed-database-management-systems-5c2be977950e
+https://www.youtube.com/watch?v=_I94-tJlovg
+https://12factor.net/
+https://www.heroku.com/
+https://w3.ibm.com/services/lighthouse/documents/145695
+https://www.google.com/search?q=eric+evans+domain+driven+design&rlz=1C1GCEU_en__866__866&sxsrf=ALeKk0289XNEc1woFkJMMZFqkTkHWsCzrg:1586164925850&tbm=isch&source=iu&ictx=1&fir=cllW50KjI5xEgM%253A%252CBcCTF1C4UZSW-M%252C%252Fm%252F03czw2b&vet=1&usg=AI4_-kT5Egs9QHYVmuKXr3lrD2M3VObyvA&sa=X&ved=2ahUKEwjjktfnvNPoAhWSxzgGHVL9ACsQ_B0wHXoECAQQAw#imgrc=cllW50KjI5xEgM:
+
+https://www.google.com/search?q=Implemeting+domain+driven+design+vaugn+vernon&tbm=isch&ved=2ahUKEwiQhIHrvNPoAhUY03MBHZclCbEQ2-cCegQIABAA&oq=Implemeting+domain+driven+design+vaugn+vernon&gs_lcp=CgNpbWcQAzoECCMQJzoFCAAQgwE6AggAOgQIABBDOgQIABAeOgYIABAKEBhQ6PsDWJeABWDngQVoBHAAeACAAfABiAGaPJIBBjAuNDEuNpgBAKABAaoBC2d3cy13aXotaW1n&sclient=img&ei=xPSKXpCSMpimz7sPl8ukiAs&rlz=1C1GCEU_en__866__866
+
+
+
+
+==============CLOUD=====================
+Lowers the barrier for entry
