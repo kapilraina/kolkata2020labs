@@ -20,3 +20,8 @@ spring:
         ddl-auto: create-drop
   profiles:
     active: dev 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
