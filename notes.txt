@@ -43,3 +43,7 @@ https://samnewman.io/books/building_microservices/
 
 ==============CLOUD=====================
 Lowers the barrier for entry
+
+===========Spring Cloud=====
+https://spring.io/projects
+https://start.spring.io/

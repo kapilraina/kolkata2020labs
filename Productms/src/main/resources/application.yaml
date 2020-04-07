@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:  
+  h2:
+    console:
+      enabled: ${productms.h2.console.enabled:true}
+      path: /h2
+      settings:
+        web-allow-others: true
+  datasource:
+    url: ${productms.datasource.url}
+    username: ${productms.datasource.username}
+    password: ${productms.datasource.password}
+    driver-class-name: org.h2.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        show_sql: true
+        ddl-auto: create-drop
+  profiles:
+    active: dev 

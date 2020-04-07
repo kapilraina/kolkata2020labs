@@ -21,9 +21,11 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
         show_sql: true
-        ddl-auto: create-drop
+        ddl-auto: create-drop  profiles:    active: dev 
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+
+greetProp: "Hello {will not be read}"      
