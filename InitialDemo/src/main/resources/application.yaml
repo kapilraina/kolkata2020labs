@@ -1,2 +1,13 @@
 server:
   port: 9090
+spring:
+  mvc:
+    view:
+      suffix: .html
+      prefix: /
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
