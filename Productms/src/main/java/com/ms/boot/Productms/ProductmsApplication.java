@@ -14,7 +14,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
-import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -29,7 +29,7 @@ import com.ms.boot.Productms.repo.ProductRepository;
 @EnableCircuitBreaker
 @EnableHystrix
 @EnableHystrixDashboard
-@FeignClient
+@EnableFeignClients
 public class ProductmsApplication {
 
 	public static void main(String[] args) {

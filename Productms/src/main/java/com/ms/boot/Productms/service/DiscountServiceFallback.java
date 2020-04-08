@@ -1,8 +1,11 @@
 package com.ms.boot.Productms.service;
 
+import org.springframework.stereotype.Component;
+
 import com.ms.boot.Productms.model.DiscountRequest;
 import com.ms.boot.Productms.model.DiscountResponse;
 
+@Component
 public class DiscountServiceFallback implements Discountserviceproxy {
 
 	@Override
