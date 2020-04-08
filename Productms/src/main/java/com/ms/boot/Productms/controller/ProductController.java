@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ms.boot.Productms.model.Product;
+import com.ms.boot.Productms.model.ProductDTO;
 import com.ms.boot.Productms.service.ProductService;
 
 @RestController
@@ -18,7 +19,7 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 
-	@RequestMapping(path = "/v0/{id}",method = RequestMethod.GET)
+	@RequestMapping(path = "/v0/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Product> getProduct(@PathVariable int id) {
 
 		Product p = productService.getProduct(id);
@@ -27,6 +28,54 @@ public class ProductController {
 			return response;
 		} else {
 			ResponseEntity<Product> response = new ResponseEntity<Product>(p, HttpStatus.FOUND);
+			return response;
+
+		}
+	}
+
+	@RequestMapping(path = "/v1/{id}", method = RequestMethod.GET)
+	public ResponseEntity<ProductDTO> getProductv1(@PathVariable int id) {
+
+		Product p = productService.getProduct(id);
+		if (p == null) {
+
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(HttpStatus.NOT_FOUND);
+			return response;
+		} else {
+			ProductDTO pDTO = productService.applyDiscount01(p);
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(pDTO, HttpStatus.FOUND);
+			return response;
+
+		}
+	}
+
+	@RequestMapping(path = "/v2/{id}", method = RequestMethod.GET)
+	public ResponseEntity<ProductDTO> getProductv2(@PathVariable int id) {
+
+		Product p = productService.getProduct(id);
+		if (p == null) {
+
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(HttpStatus.NOT_FOUND);
+			return response;
+		} else {
+			ProductDTO pDTO = productService.applyDiscount02(p);
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(pDTO, HttpStatus.FOUND);
+			return response;
+
+		}
+	}
+
+	@RequestMapping(path = "/v3/{id}", method = RequestMethod.GET)
+	public ResponseEntity<ProductDTO> getProductv3(@PathVariable int id) {
+
+		Product p = productService.getProduct(id);
+		if (p == null) {
+
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(HttpStatus.NOT_FOUND);
+			return response;
+		} else {
+			ProductDTO pDTO = productService.applyDiscount03(p);
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(pDTO, HttpStatus.FOUND);
 			return response;
 
 		}

@@ -3,4 +3,6 @@ productms.datasource.url: "jdbc:h2:mem:productDb;DB_CLOSE_DELAY=-1"
 productms.datasource.username: sa
 productms.datasource.password: 
 
+greetProp: Nihau From Config Server
+
 

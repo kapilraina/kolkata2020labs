@@ -20,7 +20,7 @@ import com.ms.boot.Productms.model.ProductTag;
 import com.ms.boot.Productms.repo.ProductRepository;
 
 @SpringBootApplication
-@EnableDiscoveryClient 
+@EnableDiscoveryClient
 @EnableEurekaClient
 public class ProductmsApplication {
 
@@ -30,16 +30,23 @@ public class ProductmsApplication {
 
 	@Autowired
 	private ProductRepository prepo;
-	
+
 	public Map<Integer, Product> productSeeds = new HashMap<Integer, Product>();
 
 	@Bean
 	Map<Integer, Product> productSeeds() {
 		return productSeeds;
 	}
+
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
+			int beanCount = ctx.getBeanDefinitionCount();
+			String[] beans = ctx.getBeanDefinitionNames();
+			System.out.println("Bean Count = " + beanCount);
+			for (int i = 0; i < beanCount; i++) {
+				System.out.println(beans[i]);
+			}
 			seedItUp();
 
 		};

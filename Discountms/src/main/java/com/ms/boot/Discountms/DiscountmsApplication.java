@@ -13,5 +13,5 @@ public class DiscountmsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DiscountmsApplication.class, args);
 	}
-
+ 
 }
