@@ -25,7 +25,3 @@ management:
     web:
       exposure:
         include: '*'
-        
-logging:
-  pattern:
-    level: "[%X{X-B3-TraceId} : %X{X-B3-SpanId}] %-5p [%t] %C{2} - %m%n"

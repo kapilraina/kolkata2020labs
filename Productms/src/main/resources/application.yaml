@@ -1,6 +1,12 @@
 server:
   port: 8081
 spring:  
+  sleuth:
+    trace-id128: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://192.168.99.105:9411/
   h2:
     console:
       enabled: ${productms.h2.console.enabled:true}
