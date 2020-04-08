@@ -80,5 +80,38 @@ public class ProductController {
 
 		}
 	}
+	
+	@RequestMapping(path = "/v4/{id}", method = RequestMethod.GET)
+	public ResponseEntity<ProductDTO> getProductv4(@PathVariable int id) {
+
+		Product p = productService.getProduct(id);
+		if (p == null) {
+
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(HttpStatus.NOT_FOUND);
+			return response;
+		} else {
+			ProductDTO pDTO = productService.applyDiscount04(p);
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(pDTO, HttpStatus.FOUND);
+			return response;
+
+		}
+	}
+	
+	@RequestMapping(path = "/v5/{id}", method = RequestMethod.GET)
+	public ResponseEntity<ProductDTO> getProductv5(@PathVariable int id) {
+
+		Product p = productService.getProduct(id);
+		if (p == null) {
+
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(HttpStatus.NOT_FOUND);
+			return response;
+		} else {
+			ProductDTO pDTO = productService.applyDiscount05(p);
+			ResponseEntity<ProductDTO> response = new ResponseEntity<ProductDTO>(pDTO, HttpStatus.FOUND);
+			return response;
+
+		}
+	}
+
 
 }

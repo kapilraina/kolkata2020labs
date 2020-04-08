@@ -35,6 +35,8 @@ https://www.google.com/search?q=eric+evans+domain+driven+design&rlz=1C1GCEU_en__
 
 https://www.google.com/search?q=Implemeting+domain+driven+design+vaugn+vernon&tbm=isch&ved=2ahUKEwiQhIHrvNPoAhUY03MBHZclCbEQ2-cCegQIABAA&oq=Implemeting+domain+driven+design+vaugn+vernon&gs_lcp=CgNpbWcQAzoECCMQJzoFCAAQgwE6AggAOgQIABBDOgQIABAeOgYIABAKEBhQ6PsDWJeABWDngQVoBHAAeACAAfABiAGaPJIBBjAuNDEuNpgBAKABAaoBC2d3cy13aXotaW1n&sclient=img&ei=xPSKXpCSMpimz7sPl8ukiAs&rlz=1C1GCEU_en__866__866
 
+https://www.amazon.in/Release-Production-Ready-Software-Pragmatic-Programmers/dp/0978739213
+
 https://en.wikipedia.org/wiki/Conway%27s_law
 https://en.wikipedia.org/wiki/Emergence
 http://www.laputan.org/mud/
