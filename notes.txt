@@ -44,10 +44,98 @@ https://samnewman.io/books/building_microservices/
 https://microservices.io/
 http://tryrabbitmq.com/
 
+https://www.youtube.com/watch?v=lKXe3HUG2l4
+https://www.youtube.com/watch?v=rmueBVrLKcY
+https://www.youtube.com/watch?v=bo5WL5IQAd0
+
+https://www.ibm.com/cloud/products
+
 
 ==============CLOUD=====================
 Lowers the barrier for entry
 
+Q: What is cloud ?
+----------------------------------------------------------------------------------------------------
+compute - processor
+memory - RAM
+storage - disk/ssd
+operating system 
+network
+ == server
+ + server
+ + server
+ + server 
+  == Data Center
+	Costs
+		- Facility Costs
+		- Infrastructure Costs
+		- Maintenance costs
+		- Power costs
+		- Cooling Fans
+		- Personel
+		- Patching 
+Amazon Web Services 
+	- hypervisor - Software Defined Hosts.
+	- Virtal hosts - VMs (Virtal Machines) - Usage can be monitored 
+	- IaaS , SaaS, PaaS , *aaS
+	- Cloud Providers 
+		Infinite access to servies , over internet , using a controlled usage based cost model.
+		everything is code (like infrastructure)
+
+Fast innovate
+Fast to run and deploy - Business value can be delivered much faster
+Saving are optimized. 
+Developers can focus on business services.
+
+IBM Cloud (multi-service)
+	> IKS (IBM K8S Services)
+	> Redhat OpenShift (K8S - PaaS)
+
+
+Q: What is cloud-native ?
+------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 ===========Spring Cloud=====
 https://spring.io/projects
 https://start.spring.io/
+
+
+
+======Docker=========
+based on linux containers
+Java
+	Write Once Run Anywhere (WORA)
+	Build Once,Run Anywhere (BORA)
+
+https://docs.docker.com/
+https://hub.docker.com/?ref=login
+
+docker-machine create -d "virtualbox" docker-vm3
+docker images
+docker pull nginx:latest
+docker run -d nginx
+docker run -d -p 80:80 --name mynginx nginx
+docker container kill 5c13c97e9e23
+docker ps
+docker container stop 1696a8e642f8 91ab8776b340
+docker ps -a
+docker container prune  // Remove all stopped containers.
+docker container rm e7e09d318ed9
+docker container kill e7e09d318ed9
+docker exe -it mynginx /etc/bin // run a command in container, in this case would present a shell.
+
+Image is build on a layered file system (union file system)
+
+
+
+
+

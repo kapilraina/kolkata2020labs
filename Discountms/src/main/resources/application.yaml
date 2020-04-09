@@ -4,9 +4,9 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://192.168.99.105:9411/
+    base-url: http://zipkin:9411/
   rabbitmq:
-    host: 192.168.99.105
+    host: rabbitmq-master
     port: 5672
   cloud:
     bus:
@@ -25,7 +25,7 @@ eureka:
     fetchRegistry: true
     prefer-same-zone-eureka: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-1:8761/eureka
 
 management:
   endpoints:
