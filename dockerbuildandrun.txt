@@ -1,0 +1,17 @@
+run for each : mvn clean package -DskipTests
+
+docker build -t kapilshekharraina/configserverkol:1 .
+docker run -p 8888:8888 -d --name configserverkol --network ms-chassis-nw  kapilshekharraina/configserverkol:1
+
+docker build -t kapilshekharraina/eurekakol:1 .
+docker run -p 8761:8761 -d --name eurekakol --network ms-chassis-nw kapilshekharraina/eurekakol:1
+
+docker build -t kapilshekharraina/cloudapigatewaykol:1 .
+docker run -p 80:9092 -d --name cloudapigatewaykol --network ms-chassis-nw --env cloudapigateway.configserverurl=http://configserverkol:8888 --env cloudapigateway.eureka.url=http://eurekakol:8761/eureka kapilshekharraina/cloudapigatewaykol:1
+
+docker build -t kapilshekharraina/discountmskol:1 .
+docker run -d --name discoutms --network ms-chassis-nw --env discountms.configserverurl=http://configserverkol:8888 --env discountms.eureka.url=http://eurekakol:8761/eureka kapilshekharraina/discountmskol:1
+
+docker build -t kapilshekharraina/productmskol:1 .
+docker run -d --name productms --network ms-chassis-nw --env productms.configserverurl=http://configserverkol:8888 --env productms.eureka.url=http://eurekakol:8761/eureka kapilshekharraina/productmskol:1 .
+

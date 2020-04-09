@@ -21,7 +21,7 @@ eureka:
     fetchRegistry: true
     prefer-same-zone-eureka: true
     serviceUrl:
-      defaultZone: http://eureka-1:8761/eureka
+      defaultZone: ${cloudapigateway.eureka.url:http://eureka-1:8761/eureka}
 
 management:
   endpoints:
