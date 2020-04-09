@@ -5,5 +5,18 @@ spring:
         git:
           uri: C:\work\ksr\kolkata2020labsconfig
           skipSslValidation: true
+    bus:
+      enabled: true
+      destination: configXchangebus
+  rabbitmq:
+    host: 192.168.99.105
+    port: 5672
+
 server:
   port: 8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

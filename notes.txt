@@ -42,6 +42,7 @@ https://en.wikipedia.org/wiki/Emergence
 http://www.laputan.org/mud/
 https://samnewman.io/books/building_microservices/
 https://microservices.io/
+http://tryrabbitmq.com/
 
 
 ==============CLOUD=====================

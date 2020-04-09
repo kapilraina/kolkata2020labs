@@ -5,6 +5,13 @@ spring:
       probability: 1.0
   zipkin:
     base-url: http://192.168.99.105:9411/
+  rabbitmq:
+    host: 192.168.99.105
+    port: 5672
+  cloud:
+    bus:
+      enabled: true
+      destination: configXchangebus
 eureka:
   instance:
     instanceId: ${spring.application.name}:${random.int}

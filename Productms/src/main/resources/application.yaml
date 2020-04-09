@@ -26,6 +26,13 @@ spring:
         ddl-auto: create-drop
   profiles:
     active: dev 
+  rabbitmq:
+    host: 192.168.99.105
+    port: 5672
+  cloud:
+    bus:
+      enabled: true
+      destination: configXchangebus
 management:
   endpoints:
     web:
