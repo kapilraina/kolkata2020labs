@@ -15,3 +15,6 @@ docker run -d --name discoutms --network ms-chassis-nw --env discountms.configse
 docker build -t kapilshekharraina/productmskol:1 .
 docker run -d --name productms --network ms-chassis-nw --env productms.configserverurl=http://configserverkol:8888 --env productms.eureka.url=http://eurekakol:8761/eureka kapilshekharraina/productmskol:1 .
 
+
+@FOR /f "tokens=*" %i IN ('docker-machine env docker-vm1') DO @%i
+
