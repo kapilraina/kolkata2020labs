@@ -160,6 +160,7 @@ https://landscape.cncf.io/
 minikube ( dev )
 minishift ( OpenShift 1 worker and 1 master)
 https://kubernetes.io/docs/home/
+https://www.katacoda.com/
 
 kubectl create ns demo
 kubectl run nginx --image=nginx --replicas=5 -n demo
