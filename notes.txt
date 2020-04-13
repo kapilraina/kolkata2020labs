@@ -229,7 +229,9 @@ kubectl apply -f cloudapigateway-svc-k8s.yaml
 kubectl apply -f discountms-dep-k8s.yaml
 
 kubectl apply -f productms-dep-k8s.yaml
+=======================
 
+https://micrometer.io/
 
 
 

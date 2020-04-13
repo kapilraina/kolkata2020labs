@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include
+		resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+	<appender name="CONSOLE"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder
+			class="net.logstash.logback.encoder.LogstashEncoder">
+				<!-- <encoder
+			class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder"> -->
+			 <fieldNames>
+                <message>log</message>
+            </fieldNames>
+			<!-- <providers>
+				<pattern>
+					<pattern>
+						{
+						"traceId": "%X{traceId}",
+						"spanId": "%X{spanId}",
+						"time": "%d",
+						"level": "%p",
+						"facility": "JsonLoggerApp",
+						"thread": "[%thread]",
+						"request-uri": "%X{req.requestURI}",
+						"request-method": "%X{req.method}",
+						"correlationid": "%X{correlationid}",
+						"source": "%logger{63}:%L",
+						"log": "%m%wEx{6}"
+						}
+					</pattern>
+					%d [%X{traceId}/%X{spanId}] [%thread] %-5level %logger{36} - %msg%n
+				</pattern>
+			</providers> -->
+		</encoder>
+	</appender>
+
+	<springProfile name="dev,local">
+
+		<root level="INFO">
+			<appender-ref ref="CONSOLE" />
+		</root>
+
+		<logger name="org.springframework" level="INFO">
+			<appender-ref ref="CONSOLE" />
+		</logger>
+		<logger name="com.ms.bootcamp" level="INFO">
+			<appender-ref ref="CONSOLE" />
+		</logger>
+	</springProfile>
+
+
+</configuration>
