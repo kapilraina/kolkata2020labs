@@ -155,6 +155,55 @@ docker tag kapilshekharraina/cloudapigatewaykol:1 kapilshekharraina/cloudapigate
 docker login
 
 
+=======K8S======================
+https://landscape.cncf.io/
+minikube ( dev )
+minishift ( OpenShift 1 worker and 1 master)
+https://kubernetes.io/docs/home/
+
+kubectl create ns demo
+kubectl run nginx --image=nginx --replicas=5 -n demo
+kubectl get pods -n demo
+
+kubectl get events -n demo
+
+kubectl get events -n demo
+kubectl get events -n demo -w
+
+kubectl get deployment -n demo
+kubectl scale deployment nginx --replicas=1 -n demo
+
+kubectl version
+kubectl version --short
+
+kubectl config view
+
+t all nodes on Virtual VM
+Login to all nodes and execute the following....
+sudo swapoff -a
+
+On Master
+1. sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+2. cat /home/master/.kube/config
+3. kubectl get nodes
+4. kubectl get secrets
+5. kubectl describe secret default-token-k4jh6
+6. Copy the token.
+
+On Windows Hosts
+kubectl config set-cluster <cluster-name> --insecure-skip-tls-verify=true --server=https://<master-ip>:6443
+kubectl config set-credentials <crednam> ----token=<copied token from master>
+kubectl config set-context <context-name> --cluster=<cluster-name> --user=<crednam> -
+kubectl config use-context <context-name>
+
+kubectl get nodes
+
+
+
+
+
+
+
 
 
 
