@@ -186,14 +186,18 @@ On Master
 1. sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 2. cat /home/master/.kube/config
 3. kubectl get nodes
-4. kubectl get secrets
-5. kubectl describe secret default-token-k4jh6
-6. Copy the token.
+4. 
+	kubectl apply -f admin-user.yaml
+	kubectl describe sa admin-user -n kube-system
+	kubectl describe secret admin-user-token-gm7rn -n kube-system
+	
+
+5. Copy the token.
 
 On Windows Hosts
 kubectl config set-cluster <cluster-name> --insecure-skip-tls-verify=true --server=https://<master-ip>:6443
 kubectl config set-credentials <crednam> --token=<copied token from master>
-kubectl config set-context <context-name> --cluster=<cluster-name> --user=<crednam> -
+kubectl config set-context <context-name> --cluster=<cluster-name> --user=<crednam> 
 kubectl config use-context <context-name>
 
 kubectl get nodes
