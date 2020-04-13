@@ -217,6 +217,20 @@ Go to mschassis/zipkin
 kubectl apply -f zipkin-dep-k8s.yaml
 kubectl apply -f zipkin-svc-k8s.yaml
 
+kubectl apply -f configserver-dep-k8s.yaml
+kubectl apply -f configserver-svc-k8s.yaml
+... once config server runs ...
+kubectl apply -f eureka-dep-k8s.yaml
+kubectl apply -f eureka-svc-k8s.yaml
+
+kubectl apply -f cloudapigateway-dep-k8s.yaml
+kubectl apply -f cloudapigateway-svc-k8s.yaml
+
+kubectl apply -f discountms-dep-k8s.yaml
+
+kubectl apply -f productms-dep-k8s.yaml
+
+
 
 
 
