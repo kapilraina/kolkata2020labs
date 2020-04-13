@@ -3,9 +3,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   labels: 
-    app: productms
+    app: cloudapigateway
     version: v1
-  name: productms
+  name: cloudapigateway
 spec: 
   strategy: # Default, so usually not specified
     type: RollingUpdate
@@ -15,30 +15,30 @@ spec:
   replicas: 1
   selector: 
     matchLabels: 
-      app: productms
+      app: cloudapigateway
       version: v1
   template: 
     metadata: 
       labels: 
-        app: productms
+        app: cloudapigateway
         version: v1
 
     spec: 
 
       containers: 
         - 
-          image: "kapilshekharraina/productmskol:1"
+          image: "kapilshekharraina/cloudapigatewaykol:1"
           imagePullPolicy: Always
-          name: discountms
+          name: cloudapigateway
           ports: 
 #          - containerPort: 8081   
           - name: httpport
-            containerPort: 8081
-            hostPort: 8081      
+            containerPort: 9092
+            hostPort: 9092      
           env:
-            - name: productms.configserverurl
+            - name: cloudapigateway.configserverurl
               value: "http://configserver:8888"
-            - name: productms.eureka.url
+            - name: cloudapigateway.eureka.url
               value: "http://eureka:8761/eureka"  
 
               
