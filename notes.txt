@@ -192,7 +192,7 @@ On Master
 
 On Windows Hosts
 kubectl config set-cluster <cluster-name> --insecure-skip-tls-verify=true --server=https://<master-ip>:6443
-kubectl config set-credentials <crednam> ----token=<copied token from master>
+kubectl config set-credentials <crednam> --token=<copied token from master>
 kubectl config set-context <context-name> --cluster=<cluster-name> --user=<crednam> -
 kubectl config use-context <context-name>
 
