@@ -233,6 +233,8 @@ kubectl apply -f productms-dep-k8s.yaml
 
 https://micrometer.io/
 
+== End of Session -===
+
 
 
 
